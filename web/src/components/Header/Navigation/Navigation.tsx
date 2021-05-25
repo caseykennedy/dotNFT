@@ -11,10 +11,8 @@ import * as S from './styles.scss'
 // ___________________________________________________________________
 
 const Navigation = () => {
-  const [colorMode, setColorMode] = useColorMode()
-  const isDark = colorMode === 'dark'
   return (
-    <S.Nav isDark={isDark}>
+    <S.Nav>
       {data.map((item, idx) => (
         <Link
           to={item.link}
@@ -35,23 +33,15 @@ export default Navigation
 
 const data = [
   {
-    name: 'incubator',
-    link: '/incubator'
+    name: 'Decentralized DNS',
+    link: '/#decentralized-dns'
   },
   {
-    name: 'donate',
-    link: '/donate'
+    name: 'Create & Secure',
+    link: '/#create-secure'
   },
   {
-    name: 'grants',
-    link: '/grants'
-  },
-  {
-    name: 'about',
-    link: '/about'
-  },
-  {
-    name: 'blog',
-    link: '/blog'
+    name: 'NFT Verification',
+    link: '/#nft-verification'
   }
 ]

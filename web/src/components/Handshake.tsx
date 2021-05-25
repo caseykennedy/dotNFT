@@ -9,8 +9,6 @@ import { useColorMode } from 'theme-ui'
 type Props = { fill?: string }
 
 const Handshake: React.FC<Props> = ({ fill }) => {
-  const [colorMode] = useColorMode()
-  const isDark = colorMode === 'dark'
   return (
     <SVG
       width="28"
@@ -19,7 +17,6 @@ const Handshake: React.FC<Props> = ({ fill }) => {
       initial="hidden"
       animate="visible"
       fill={fill}
-      isDark={isDark}
     >
       <defs>
         <linearGradient
@@ -46,15 +43,10 @@ export default Handshake
 
 // ___________________________________________________________________
 
-const SVG = styled(motion.svg)<{ fill?: string; isDark: boolean }>`
+const SVG = styled(motion.svg)<{ fill?: string }>`
   .hns-1 {
     fill-rule: evenodd;
-    fill: ${(p) =>
-      p.fill
-        ? p.isDark
-          ? theme.colors.white
-          : theme.colors.black
-        : `url(#Indigo_224)`};
+    fill: ${(p) => (p.fill ? theme.colors.black : `url(#Indigo_224)`)};
   }
 `
 

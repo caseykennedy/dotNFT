@@ -22,7 +22,7 @@ export const MobileNav = styled(motion.ul)`
   width: 100%;
 `
 
-export const NavLink = styled(motion.li)<{ isDark?: boolean }>`
+export const NavLink = styled(motion.li)`
   display: flex;
   flex-direction: column;
   margin: 0;
@@ -30,8 +30,7 @@ export const NavLink = styled(motion.li)<{ isDark?: boolean }>`
   padding: ${theme.space[1]} ${theme.space[4]};
 
   a {
-    color: ${(p) =>
-        p.isDark ? theme.colors.modes.dark.text : theme.colors.text};
+    color: ${theme.colors.text};
     font-size: ${theme.fontSizes[3]};
     text-decoration: none;
     width: 100%;
@@ -42,5 +41,3 @@ export const NavLink = styled(motion.li)<{ isDark?: boolean }>`
     }
   }
 `
-
-// ___________________________________________________________________ Styles

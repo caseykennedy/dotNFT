@@ -26,11 +26,6 @@ type ThemeShape = {
     black: string
     white: string
     gray: string
-    modes: {
-      dark: {
-        [key: string]: string
-      }
-    }
   }
   space: string[]
   gutter: {
@@ -40,9 +35,6 @@ type ThemeShape = {
     [key: string]: string
   }
   fontSizes: string[]
-  Heading: {
-    [key: string]: string
-  }
   fontWeights: {
     [key: string]: number
   }
@@ -102,39 +94,20 @@ const theme: ThemeShape = {
   // Color palette
   // ___________________________________________________________________
 
-  initialColorModeName: 'default',
-  useColorSchemeMediaQuery: false,
-  // useBodyStyles: false,
-  // useRootStyles: true,
-  // useLocalStorage: true,
   colors: {
-    text: '#242424',
+    text: '#212121',
     background: '#ffffff',
 
-    primary: '#5700ff',
-    secondary: '#a2f6ff',
-    tertiary: '#2d00ff',
-    accent: '#b5a0ff',
+    primary: '#0080FF',
+    secondary: '#78FFF2',
+    tertiary: '#E0F8FF',
+    accent: '#b5a0ff', 
     highlight: '#fdffd4',
-    muted: '#f2f2f2',
+    muted: '#DBDBDB',
 
     black: '#000000',
     white: '#ffffff',
-    gray: '#8a8892',
-
-    modes: {
-      dark: {
-        text: '#f2f2f2',
-        background: '#242424',
-
-        primary: '#b5a0ff',
-        highlight: '#403d4e',
-        muted: '#202020',
-
-        black: '#ffffff',
-        white: '#000000',
-      },
-    },
+    gray: '#DBDBDB',
   },
 
   // Space
@@ -170,9 +143,10 @@ const theme: ThemeShape = {
   // ___________________________________________________________________
 
   fonts: {
-    body: `"ManRope", Consolas, Liberation Mono, Menlo, Courier, monospace`,
-    heading: `"ManRope", Consolas, Liberation Mono, Menlo, Courier, monospace`,
-    sans: `"ManRope", Consolas, Liberation Mono, Menlo, Courier, monospace`,
+    body: `"Karla", Arial, Liberation Mono, Menlo, Courier, monospace`,
+    heading: `"Karla", Arial, Liberation Mono, Menlo, Courier, monospace`,
+    sans: `"Karla", Arial, Liberation Mono, Menlo, Courier, monospace`,
+    display: `"Saygon", Arial, Liberation Mono, Menlo, Courier, monospace`,
     mono: `"DMMono", Consolas, Liberation Mono, Menlo, Courier, monospace`,
   },
 
@@ -187,8 +161,6 @@ const theme: ThemeShape = {
     'var(--text-xxxl)', // 7
   ],
 
-  Heading: {},
-
   fontWeights: {
     light: 300,
     regular: 400,
@@ -202,7 +174,7 @@ const theme: ThemeShape = {
   maxWidth: '1440px',
   siteWidth: '1680px',
   logoWidth: '',
-  headerHeight: '150px',
+  headerHeight: '80px',
   tickerHeight: '56px',
   iconWidth: '18px',
 

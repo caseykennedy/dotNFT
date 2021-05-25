@@ -29,21 +29,20 @@ const RootVariables = css`
     -------------------------------- */
 
     /* set base values */
-    --text-base-size: 1.15em;
+    --text-base-size: 1em;
     --text-scale-ratio: 1.250;
 
     /* line-height */
-    --heading-line-height: 1.65;
-    --body-line-height: 1.6;
+    --heading-line-height: 1.25;
+    --body-line-height: 1.75;
 
     /* letter-spacing */
-    --heading-letter-spacing: 0.5px;
-    --body-letter-spacing: 0.5px;
+    --heading-letter-spacing: 0px;
+    --body-letter-spacing: 0px;
 
     @media ${theme.mq.tablet} {
-      --text-base-size: 1.25em;
-      --heading-line-height: 1.5;
-      --body-line-height: 1.5;
+      --text-base-size: 1.1em;
+      --body-line-height: 1.5; 
     }
 
     /* type scale */

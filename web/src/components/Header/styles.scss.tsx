@@ -25,6 +25,7 @@ export const Header = styled(Box)`
 
   .header-inner {
     display: flex;
+    align-items: center;
     justify-content: space-between;
 
     overflow: visible;
@@ -35,6 +36,8 @@ export const Header = styled(Box)`
   }
 
   .logo {
+    font-family: ${theme.fonts.display};
+    font-size: ${theme.fontSizes[3]};
     text-decoration: none;
   }
 `
@@ -83,15 +86,6 @@ export const Logo = styled(Flex)`
   }
 
   .wordmark {
-    margin-top: ${theme.space[4]};
-    font-size: ${theme.fontSizes[1]};
-    font-weight: 600;
-    line-height: 1.25;
-    text-decoration: none;
-
-    @media ${theme.mq.tablet} {
-      /* font-size: ${theme.fontSizes[2]}; */
-    }
   }
 `
 

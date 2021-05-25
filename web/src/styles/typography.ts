@@ -5,41 +5,27 @@
 import { css } from 'styled-components'
 import theme from '../gatsby-plugin-theme-ui'
 
-// ManRope Light
-import ManropeLightEot from './fonts/Manrope-Light.eot'
-import ManropeLightWoff2 from './fonts/Manrope-Light.woff2'
-import ManropeLightWoff from './fonts/Manrope-Light.woff'
-import ManropeLightOtf from './fonts/Manrope-Light.otf'
+// Karla Regular
+import KarlaRegularEot from './fonts/Karla-Regular.eot'
+import KarlaRegularOtf from './fonts/Karla-Regular.otf'
+import KarlaRegularWoff from './fonts/Karla-Regular.woff'
 
-// ManRope Regular
-import ManropeRegularEot from './fonts/Manrope-Regular.eot'
-import ManropeRegularWoff2 from './fonts/Manrope-Regular.woff2'
-import ManropeRegularWoff from './fonts/Manrope-Regular.woff'
-import ManropeRegularOtf from './fonts/Manrope-Regular.otf'
+// Karla Italic
+import KarlaItalicEot from './fonts/Karla-Italic.eot'
+import KarlaItalicOtf from './fonts/Karla-Italic.otf'
+import KarlaItalicWoff from './fonts/Karla-Italic.woff'
+import KarlaItalicWoff2 from './fonts/Karla-Italic.woff2'
 
-// ManRope Medium
-import ManropeMediumEot from './fonts/Manrope-Medium.eot'
-import ManropeMediumWoff2 from './fonts/Manrope-Medium.woff2'
-import ManropeMediumWoff from './fonts/Manrope-Medium.woff'
-import ManropeMediumOtf from './fonts/Manrope-Medium.otf'
+// Karla Bold
+import KarlaBoldEot from './fonts/Karla-Bold.eot'
+import KarlaBoldOtf from './fonts/Karla-Bold.otf'
+import KarlaBoldWoff from './fonts/Karla-Bold.woff'
+import KarlaBoldWoff2 from './fonts/Karla-Bold.woff2'
 
-// ManRope Semi Bold
-import ManropeSemiBoldEot from './fonts/Manrope-SemiBold.eot'
-import ManropeSemiBoldWoff2 from './fonts/Manrope-SemiBold.woff2'
-import ManropeSemiBoldWoff from './fonts/Manrope-SemiBold.woff'
-import ManropeSemiBoldOtf from './fonts/Manrope-SemiBold.otf'
-
-// ManRope Bold
-import ManropeBoldEot from './fonts/Manrope-Bold.eot'
-import ManropeBoldWoff2 from './fonts/Manrope-Bold.woff2'
-import ManropeBoldWoff from './fonts/Manrope-Bold.woff'
-import ManropeBoldOtf from './fonts/Manrope-Bold.otf'
-
-// ManRope Extra Bold
-import ManropeBlackEot from './fonts/Manrope-ExtraBold.eot'
-import ManropeBlackWoff2 from './fonts/Manrope-ExtraBold.woff2'
-import ManropeBlackWoff from './fonts/Manrope-ExtraBold.woff'
-import ManropeBlackOtf from './fonts/Manrope-ExtraBold.otf'
+// CA Saygon Regular
+import SaygonRegularEot from './fonts/CA-Saygon-Regular.eot'
+import SaygonRegularOtf from './fonts/CA-Saygon-Regular.otf'
+import SaygonRegularWoff from './fonts/CA-Saygon-Regular.woff'
 
 // DM Mono Regular
 import DMMonoRegularEot from './fonts/DMMono-Regular.eot'
@@ -47,108 +33,56 @@ import DMMonoRegularWoff2 from './fonts/DMMono-Regular.woff2'
 import DMMonoRegularWoff from './fonts/DMMono-Regular.woff'
 import DMMonoRegularOtf from './fonts/DMMono-Regular.otf'
 
-// DM Mono Light
-import DMMonoLightEot from './fonts/DMMono-Light.eot'
-import DMMonoLightWoff2 from './fonts/DMMono-Light.woff2'
-import DMMonoLightWoff from './fonts/DMMono-Light.woff'
-import DMMonoLightOtf from './fonts/DMMono-Light.otf'
-
-// DM Mono Medium
-import DMMonoMediumEot from './fonts/DMMono-Medium.eot'
-import DMMonoMediumWoff2 from './fonts/DMMono-Medium.woff2'
-import DMMonoMediumWoff from './fonts/DMMono-Medium.woff'
-import DMMonoMediumOtf from './fonts/DMMono-Medium.otf'
-
 // ___________________________________________________________________
 
 const Typography = css`
-  /* ManRope Light */
-  @font-face {
-    font-family: 'ManRope';
-    src: url(${ManropeLightEot});
-    src: url(${ManropeLightWoff2}) format('woff2'),
-      url(${ManropeLightWoff}) format('woff'),
-      url(${ManropeLightOtf}) format('opentype'),
-      url(${ManropeLightEot}?#iefix) format('embedded-opentype');
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
-  }
 
-  /* ManRope Regular */
+  /* Karla Regular */
   @font-face {
-    font-family: 'ManRope';
-    src: url(${ManropeRegularEot});
-    src: url(${ManropeRegularWoff2}) format('woff2'),
-      url(${ManropeRegularWoff}) format('woff'),
-      url(${ManropeRegularOtf}) format('opentype'),
-      url(${ManropeRegularEot}?#iefix) format('embedded-opentype');
+    font-family: 'Karla';
+    src: url(${KarlaRegularEot});
+    src: url(${KarlaRegularWoff}) format('woff'),
+      url(${KarlaRegularOtf}) format('opentype'),
+      url(${KarlaRegularEot}?#iefix) format('embedded-opentype');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
   }
 
-  /* ManRope Medium */
+  /* Karla Italic */
   @font-face {
-    font-family: 'ManRope';
-    src: url(${ManropeMediumEot});
-    src: url(${ManropeMediumWoff2}) format('woff2'),
-      url(${ManropeMediumWoff}) format('woff'),
-      url(${ManropeMediumOtf}) format('opentype'),
-      url(${ManropeMediumEot}?#iefix) format('embedded-opentype');
-    font-weight: 500;
-    font-style: normal;
+    font-family: 'Karla';
+    src: url(${KarlaItalicEot});
+    src: url(${KarlaItalicWoff2}) format('woff2'),
+      url(${KarlaItalicWoff}) format('woff'),
+      url(${KarlaItalicOtf}) format('opentype'),
+      url(${KarlaItalicEot}?#iefix) format('embedded-opentype');
+    font-weight: 700;
+    font-style: italic;
     font-display: swap;
   }
 
-  /* ManRope Semi Bold */
+  /* Karla Bold */
   @font-face {
-    font-family: 'ManRope';
-    src: url(${ManropeSemiBoldEot});
-    src: url(${ManropeSemiBoldWoff2}) format('woff2'),
-      url(${ManropeSemiBoldWoff}) format('woff'),
-      url(${ManropeSemiBoldOtf}) format('opentype'),
-      url(${ManropeSemiBoldEot}?#iefix) format('embedded-opentype');
-    font-weight: 600;
-    font-style: normal;
-    font-display: swap;
-  }
-
-  /* ManRope Bold */
-  @font-face {
-    font-family: 'ManRope';
-    src: url(${ManropeBoldEot});
-    src: url(${ManropeBoldWoff2}) format('woff2'),
-      url(${ManropeBoldWoff}) format('woff'),
-      url(${ManropeBoldOtf}) format('opentype'),
-      url(${ManropeBoldEot}?#iefix) format('embedded-opentype');
+    font-family: 'Karla';
+    src: url(${KarlaBoldEot});
+    src: url(${KarlaBoldWoff2}) format('woff2'),
+      url(${KarlaBoldWoff}) format('woff'),
+      url(${KarlaBoldOtf}) format('opentype'),
+      url(${KarlaBoldEot}?#iefix) format('embedded-opentype');
     font-weight: 700;
     font-style: normal;
     font-display: swap;
   }
 
-  /* ManRope Extra Bold */
+  /* CA Saygon Regular */
   @font-face {
-    font-family: 'ManRope';
-    src: url(${ManropeBlackEot});
-    src: url(${ManropeBlackWoff2}) format('woff2'),
-      url(${ManropeBlackWoff}) format('woff'),
-      url(${ManropeBlackOtf}) format('opentype'),
-      url(${ManropeBlackEot}?#iefix) format('embedded-opentype');
-    font-weight: 800;
-    font-style: normal;
-    font-display: swap;
-  }
-
-  /* DM Mono Light */
-  @font-face {
-    font-family: 'DMMono';
-    src: url(${DMMonoLightEot});
-    src: url(${DMMonoLightWoff2}) format('woff2'),
-      url(${DMMonoLightWoff}) format('woff'),
-      url(${DMMonoLightOtf}) format('opentype'),
-      url(${DMMonoLightEot}?#iefix) format('embedded-opentype');
-    font-weight: 300;
+    font-family: 'Saygon';
+    src: url(${SaygonRegularEot});
+    src: url(${SaygonRegularWoff}) format('woff'),
+      url(${SaygonRegularOtf}) format('opentype'),
+      url(${SaygonRegularEot}?#iefix) format('embedded-opentype');
+    font-weight: 400;
     font-style: normal;
     font-display: swap;
   }
@@ -162,19 +96,6 @@ const Typography = css`
       url(${DMMonoRegularOtf}) format('opentype'),
       url(${DMMonoRegularEot}?#iefix) format('embedded-opentype');
     font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-  }
-
-  /* DM Mono Medium */
-  @font-face {
-    font-family: 'DMMono';
-    src: url(${DMMonoMediumEot});
-    src: url(${DMMonoMediumWoff2}) format('woff2'),
-      url(${DMMonoMediumWoff}) format('woff'),
-      url(${DMMonoMediumOtf}) format('opentype'),
-      url(${DMMonoMediumEot}?#iefix) format('embedded-opentype');
-    font-weight: 500;
     font-style: normal;
     font-display: swap;
   }
@@ -199,7 +120,7 @@ const Typography = css`
   body {
     color: ${theme.colors.text};
 
-    font-size: ${theme.root.font.baseSize};
+    font-size: ${theme.fontSizes[2]};
     font-family: ${theme.fonts.body};
     font-weight: ${theme.fontWeights.regular};
     line-height: ${theme.root.font.bodyLineHeight};
@@ -227,15 +148,14 @@ const Typography = css`
   h5,
   h6 {
     font-family: ${theme.fonts.heading};
-    font-weight: 500;
+    font-weight: ${theme.fontWeights.regular};
     line-height: ${theme.root.font.headingLineHeight};
     letter-spacing: ${theme.root.font.headingLetterSpacing};
-    margin: 0 0 ${theme.space[3]};
     transition: ${theme.transition.all};
   }
 
   .text--xxxl {
-    font-size: calc(${theme.fontSizes[4]});
+    font-size: ${theme.fontSizes[7]};
 
     @media ${theme.mq.tablet} {
       font-size: calc(${theme.fontSizes[6]} / 1);
@@ -248,29 +168,29 @@ const Typography = css`
 
   h1,
   .text--xxl {
-    /* font-family: ${theme.fonts.display}; */
-    font-size: calc(${theme.fontSizes[5]});
+    font-size: calc(${theme.fontSizes[6]});
+    margin: 0 0 ${theme.space[2]};
+
+    @media ${theme.mq.tablet} {
+      font-size: ${theme.fontSizes[7]};
+    }
+  }
+
+  h2,
+  .text--xl {
+    font-size: ${theme.fontSizes[5]};
 
     @media ${theme.mq.tablet} {
       font-size: ${theme.fontSizes[6]};
     }
   }
 
-  h2,
-  .text--xl {
-    font-size: ${theme.fontSizes[4]};
-
-    @media ${theme.mq.tablet} {
-      font-size: ${theme.fontSizes[5]};
-    }
-  }
-
   h3,
   .text--lg {
-    font-size: calc(${theme.fontSizes[3]});
+    font-size: calc(${theme.fontSizes[4]});
 
     @media ${theme.mq.tablet} {
-      font-size: calc(${theme.fontSizes[4]});
+      font-size: calc(${theme.fontSizes[5]});
     }
   }
 
@@ -279,30 +199,24 @@ const Typography = css`
     font-size: calc(${theme.fontSizes[3]});
 
     @media ${theme.mq.tablet} {
-      font-size: calc(${theme.fontSizes[3]});
+      font-size: calc(${theme.fontSizes[4]});
     }
   }
 
   h5,
   .text--sm {
-    font-size: calc(${theme.fontSizes[2]} / 1.25);
-    font-weight: 600;
-    line-height: ${theme.root.font.bodyLineHeight};
+    font-size: calc(${theme.fontSizes[3]});
   }
 
   h6,
   .text--xs {
-    font-size: calc(${theme.fontSizes[2]} / 1.5);
-    font-weight: 600;
-    line-height: ${theme.root.font.bodyLineHeight};
+    font-size: ${theme.fontSizes[2]};
   }
 
   p,
   .text--base {
-    font-size: calc(${theme.fontSizes[2]} / 1.25);
-    font-weight: 600;
+    font-size: ${theme.fontSizes[2]};
     line-height: ${theme.root.font.bodyLineHeight};
-    margin: 0 0 ${theme.space[3]};
 
     &:last-child {
       margin-bottom: 0;

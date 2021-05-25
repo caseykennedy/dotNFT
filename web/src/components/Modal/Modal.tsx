@@ -20,13 +20,11 @@ type ModalProps = {
 const defaultProps = {}
 
 const Modal: React.FC<ModalProps> = ({ children, open, close }) => {
-  const [colorMode, setColorMode] = useColorMode()
-  const isDark = colorMode === 'dark'
   return (
     <ReactModal
       open={open}
       onClose={close}
-      styles={!isDark ? modalStylesLight : modalStylesDark }
+      styles={modalStyles}
       focusTrapped={false}
       center={true}
       showCloseIcon={false}
@@ -42,9 +40,9 @@ export default Modal
 
 Modal.defaultProps = defaultProps
 
-const modalStylesLight = {
+const modalStyles = {
   overlay: {
-    background: theme.colors.muted
+    background: theme.colors.muted,
   },
   modal: {
     background: theme.colors.muted,
@@ -53,21 +51,6 @@ const modalStylesLight = {
     padding: `0`,
     height: '100%',
     maxWidth: '100%',
-    width: '100%'
-  }
-}
-
-const modalStylesDark = {
-  overlay: {
-    background: theme.colors.modes.dark.muted
+    width: '100%',
   },
-  modal: {
-    background: theme.colors.modes.dark.muted,
-    boxShadow: 'none',
-    margin: '0',
-    padding: `0`,
-    height: '100%',
-    maxWidth: '100%',
-    width: '100%'
-  }
 }

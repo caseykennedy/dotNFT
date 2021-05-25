@@ -31,37 +31,38 @@ const Header = () => {
         <Flex className="header-inner" py={4}>
           <Link to="/" className="logo" aria-label="dotNFT, back to home">
             <S.Logo onClick={() => setNavOpen(false)}>
-              {/* <Box className="symbol">
-                <Symbol fill={theme.colors.black} />
-              </Box> */}
-              <Typist cursor={cursorProps}>
-                <Text
-                  as="p"
-                  color="text"
-                  className="wordmark"
-                  aria-label="The Handshake Foundation"
-                >
-                  dotNFT
+              <Text className="wordmark" aria-label="dotNFT">
+                <Text as="span" color="primary" sx={{ fontSize: 4 }}>
+                  .
                 </Text>
-              </Typist>
+                nft
+              </Text>
             </S.Logo>
           </Link>
+
+          <S.Menu>
+            <Navigation />
+
+            {/* <Box className="symbol">
+              <Symbol fill={theme.colors.black} />
+            </Box> */}
+          </S.Menu>
         </Flex>
       </S.Header>
 
-      <Modal open={isNavOpen} close={toggleMenu}>
+      {/* <Modal open={isNavOpen} close={toggleMenu}>
         <MobileNav isOpen={isNavOpen} handleExitOnClick={toggleMenu} />
-      </Modal>
+      </Modal> */}
     </>
   )
 }
 
 export default Header
 
-const cursorProps = {
-  show: false,
-  blink: true,
-  element: '|',
-  hideWhenDone: true,
-  hideWhenDoneDelay: 1000,
-}
+// const cursorProps = {
+//   show: false,
+//   blink: true,
+//   element: '|',
+//   hideWhenDone: true,
+//   hideWhenDoneDelay: 1000,
+// }

@@ -7,7 +7,7 @@ import theme from '../../../gatsby-plugin-theme-ui'
 
 // ___________________________________________________________________
 
-export const Nav = styled.nav<{ isDark: boolean }>`
+export const Nav = styled.nav`
   display: none;
   justify-content: space-between;
   align-items: center;
@@ -19,21 +19,18 @@ export const Nav = styled.nav<{ isDark: boolean }>`
   }
 
   a {
-    color: ${(p) =>
-      p.isDark ? theme.colors.modes.dark.text : theme.colors.text};
+    color: ${theme.colors.text};
     font-size: ${theme.fontSizes[1]};
-    font-weight: 600;
     text-decoration: none;
     margin-left: ${theme.space[4]};
 
     @media ${theme.mq.tablet} {
-      margin-left: ${theme.space[5]};
+      margin-left: ${theme.space[6]};
     }
 
     &.active,
     &:hover {
-      color: ${(p) =>
-        p.isDark ? theme.colors.modes.dark.primary : theme.colors.primary};
+      color: ${theme.colors.primary};
     }
   }
 `
