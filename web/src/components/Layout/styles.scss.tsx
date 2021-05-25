@@ -18,10 +18,7 @@ export const Wrapper = styled.div`
 export const Main = styled.main`
   margin: 0 auto;
   position: relative;
-  padding-top: ${theme.headerHeight};
   max-height: 100%;
   max-width: ${theme.siteWidth};
   width: 100%;
 `
-
-// ___________________________________________________________________

@@ -16,7 +16,6 @@ type ThemeShape = {
   colors: {
     text: string
     background: string
-
     primary: string
     secondary: string
     tertiary: string
@@ -41,7 +40,7 @@ type ThemeShape = {
   strokeWidth: string
   maxWidth: string
   siteWidth: string
-  logoWidth: string
+  logoHeight: string
   headerHeight: string
   tickerHeight: string
   iconWidth: string
@@ -101,7 +100,7 @@ const theme: ThemeShape = {
     primary: '#0080FF',
     secondary: '#78FFF2',
     tertiary: '#E0F8FF',
-    accent: '#b5a0ff', 
+    accent: '#b5a0ff',
     highlight: '#fdffd4',
     muted: '#DBDBDB',
 
@@ -135,8 +134,8 @@ const theme: ThemeShape = {
     mobile: 4,
     tablet: 5,
     desktop: 5,
-    vertical: [5],
-    axis: [4, 5],
+    vertical: [6],
+    axis: [5],
   },
 
   // Typography
@@ -172,8 +171,8 @@ const theme: ThemeShape = {
   strokeWidth: '2px',
 
   maxWidth: '1440px',
-  siteWidth: '1680px',
-  logoWidth: '',
+  siteWidth: '100%',
+  logoHeight: '47px',
   headerHeight: '80px',
   tickerHeight: '56px',
   iconWidth: '18px',

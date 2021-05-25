@@ -28,7 +28,7 @@ const Header = () => {
   return (
     <>
       <S.Header px={theme.gutter.axis}>
-        <Flex className="header-inner" py={4}>
+        <Flex className="header-inner">
           <Link to="/" className="logo" aria-label="dotNFT, back to home">
             <S.Logo onClick={() => setNavOpen(false)}>
               <Text className="wordmark" aria-label="dotNFT">
@@ -43,9 +43,9 @@ const Header = () => {
           <S.Menu>
             <Navigation />
 
-            {/* <Box className="symbol">
-              <Symbol fill={theme.colors.black} />
-            </Box> */}
+            <Box className="symbol">
+              <Symbol />
+            </Box>
           </S.Menu>
         </Flex>
       </S.Header>

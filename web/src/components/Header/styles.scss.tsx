@@ -3,21 +3,16 @@
 // ___________________________________________________________________
 
 import styled from 'styled-components'
-
-// Theme
 import theme from '../../gatsby-plugin-theme-ui'
-
-// Elements
 import { Box, Flex } from 'theme-ui'
 
 // ___________________________________________________________________
 
 export const Header = styled(Box)`
   overflow: visible;
-  max-height: 0;
   width: 100%;
   position: relative;
-  z-index: 9999;
+  /* z-index: 9999; */
 
   a {
     color: ${theme.colors.black};
@@ -34,83 +29,26 @@ export const Header = styled(Box)`
     height: ${theme.headerHeight};
     width: 100%;
   }
-
-  .logo {
-    font-family: ${theme.fonts.display};
-    font-size: ${theme.fontSizes[3]};
-    text-decoration: none;
-  }
 `
 
 export const Menu = styled(Flex)`
-  align-items: flex-start;
+  align-items: center;
   justify-content: flex-end;
 
-
-  .toggle {
-    &__menu {
-      display: initial;
-      align-items: flex-start;
-      box-sizing: content-box;
-
-      color: ${theme.colors.text};
-      font-size: calc(${theme.fontSizes[2]});
-      font-weight: 400;
-      cursor: pointer;
-
-      position: relative;
-      z-index: 9999;
-
-      @media ${theme.mq.tablet} {
-        display: none;
-      }
-
-      span {
-        svg {
-          width: ${theme.space[5]};
-        }
-      }
-    }
+  .symbol {
+    margin-left: ${theme.space[5]};
+    
+    
   }
 `
 
 export const Logo = styled(Flex)`
   display: flex;
   flex-direction: column;
-  mix-blend-mode: difference;
-
-  .symbol {
-    svg {
-      width: calc(${theme.space[5]} / 1.05);
-    }
-  }
 
   .wordmark {
-  }
-`
-
-export const Utilities = styled(Flex)``
-
-export const Toggle = styled(Box)`
-  display: initial;
-  align-items: flex-start;
-  box-sizing: content-box;
-
-  color: ${theme.colors.text};
-  font-size: calc(${theme.fontSizes[2]});
-  font-weight: 400;
-  cursor: pointer;
-
-  position: relative;
-  z-index: 9999;
-
-  @media ${theme.mq.tablet} {
-    display: none;
-  }
-
-  span {
-    svg {
-      width: ${theme.space[5]};
-    }
+    font-family: ${theme.fonts.display};
+    font-size: ${theme.fontSizes[3]};
+    text-decoration: none;
   }
 `

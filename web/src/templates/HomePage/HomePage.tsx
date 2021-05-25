@@ -32,18 +32,40 @@ const HomePage: React.FC = () => {
         </Text>
 
         <Heading as="h2" mb={2}>
-          Greetings
+          Meet the{' '}
+          <Text as="span" sx={{ fontFamily: `display` }}>
+            .nft
+          </Text>{' '}
+          domain layer.
         </Heading>
         <Heading as="h3" mb={2}>
-          Greetings
+          Meet the{' '}
+          <Text as="span" sx={{ fontFamily: `display` }}>
+            .nft
+          </Text>{' '}
+          domain layer.
         </Heading>
         <Heading as="h4" mb={2}>
-          Greetings
+          Meet the{' '}
+          <Text as="span" sx={{ fontFamily: `display` }}>
+            .nft
+          </Text>{' '}
+          domain layer.
         </Heading>
         <Heading as="h5" mb={2}>
-          Greetings
+          Meet the{' '}
+          <Text as="span" sx={{ fontFamily: `display` }}>
+            .nft
+          </Text>{' '}
+          domain layer.
         </Heading>
-        <Heading as="h6">Greetings</Heading>
+        <Heading as="h6">
+          Meet the{' '}
+          <Text as="span" sx={{ fontFamily: `display` }}>
+            .nft
+          </Text>{' '}
+          domain layer.
+        </Heading>
       </Section>
 
       <Section bg="text" color="gray">
@@ -52,27 +74,16 @@ const HomePage: React.FC = () => {
           <Text as="span" sx={{ fontFamily: `display` }}>
             .nft
           </Text>{' '}
-          domain layer.
+          <Text as="span" sx={{ fontStyle: `italic` }}>
+            domain
+          </Text>{' '}
+          layer.
         </Heading>
         <Text as="p" mb={6}>
           Create and ⛓ link unique .nft domains accross blockchains and the web.
           Create and ⛓ link unique .nft domains accross blockchains and the web.
           Create and ⛓ link unique .nft domains accross blockchains and the web.
         </Text>
-
-        <Heading as="h2" mb={2}>
-          Greetings
-        </Heading>
-        <Heading as="h3" mb={2}>
-          Greetings
-        </Heading>
-        <Heading as="h4" mb={2}>
-          Greetings
-        </Heading>
-        <Heading as="h5" mb={2}>
-          Greetings
-        </Heading>
-        <Heading as="h6">Greetings</Heading>
       </Section>
 
       <Section bg="secondary">
@@ -88,20 +99,6 @@ const HomePage: React.FC = () => {
           Create and ⛓ link unique .nft domains accross blockchains and the web.
           Create and ⛓ link unique .nft domains accross blockchains and the web.
         </Text>
-
-        <Heading as="h2" mb={2}>
-          Greetings
-        </Heading>
-        <Heading as="h3" mb={2}>
-          Greetings
-        </Heading>
-        <Heading as="h4" mb={2}>
-          Greetings
-        </Heading>
-        <Heading as="h5" mb={2}>
-          Greetings
-        </Heading>
-        <Heading as="h6">Greetings</Heading>
       </Section>
     </S.HomePage>
   )
