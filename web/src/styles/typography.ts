@@ -57,7 +57,7 @@ const Typography = css`
       url(${KarlaItalicWoff}) format('woff'),
       url(${KarlaItalicOtf}) format('opentype'),
       url(${KarlaItalicEot}?#iefix) format('embedded-opentype');
-    font-weight: 700;
+    font-weight: 400;
     font-style: italic;
     font-display: swap;
   }

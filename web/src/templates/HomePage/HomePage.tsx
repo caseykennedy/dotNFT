@@ -7,7 +7,7 @@ import React from 'react'
 // Theme + ui
 import theme from '../../gatsby-plugin-theme-ui'
 import * as S from './styles.scss'
-import { Heading, Text } from 'theme-ui'
+import { Box, Button, Flex, Heading, Text } from 'theme-ui'
 
 // Components
 import Section from '../../components/Section'
@@ -30,6 +30,16 @@ const HomePage: React.FC = () => {
           Create and ⛓ link unique .nft domains accross blockchains and the web.
           Create and ⛓ link unique .nft domains accross blockchains and the web.
         </Text>
+
+        <Flex mb={6}>
+          <Button mr={2} variant="primary">
+            Apply
+          </Button>
+          <Button mr={2} bg="secondary" color="black" variant="primary">
+            Apply
+          </Button>
+          <Button variant="secondary">Apply</Button>
+        </Flex>
 
         <Heading as="h2" mb={2}>
           Meet the{' '}

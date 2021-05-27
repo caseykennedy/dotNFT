@@ -37,6 +37,11 @@ type ThemeShape = {
   fontWeights: {
     [key: string]: number
   }
+  buttons: {
+    [key: string]: {
+      [key: string]: any
+    }
+  }
   strokeWidth: string
   maxWidth: string
   siteWidth: string
@@ -169,6 +174,46 @@ const theme: ThemeShape = {
   },
 
   strokeWidth: '2px',
+
+  // Button
+  // ___________________________________________________________________
+
+  buttons: {
+    primary: {
+      bg: 'primary',
+      color: 'white',
+      borderRadius: 0,
+      cursor: 'pointer',
+      fontSize: 3,
+      fontWeight: 700,
+      py: 3,
+      px: 4,
+      transition: 'all 0.11s ease-in-out 0s',
+      '&:hover': {
+        bg: 'black',
+        color: 'white',
+      },
+    },
+    secondary: {
+      bg: 'transparent',
+      color: 'text',
+      border: '1px solid',
+      borderColor: 'text',
+      borderRadius: 0,
+      cursor: 'pointer',
+      fontSize: 3,
+      fontWeight: 700,
+      py: 3,
+      px: 4,
+      '&:hover': {
+        bg: 'black',
+        color: 'white',
+      },
+    },
+  },
+
+  // Constants
+  // ___________________________________________________________________
 
   maxWidth: '1440px',
   siteWidth: '100%',

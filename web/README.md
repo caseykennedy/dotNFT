@@ -1,6 +1,6 @@
 # dotNFT Marketing Website
 
-
+[![Netlify Status](https://api.netlify.com/api/v1/badges/2f87b92c-414f-4c1d-b2ba-a1469441fa70/deploy-status)](https://app.netlify.com/sites/dotnft/deploys)
 
 ## Features
 

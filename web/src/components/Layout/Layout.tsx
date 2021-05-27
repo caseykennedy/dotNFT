@@ -17,12 +17,9 @@ import GlobalStyles from '../../styles/global'
 
 export type LayoutProps = {
   children: React.ReactNode
-  isShowing?: boolean
-  toggleOverlay?: () => void
   location?: {
     pathname: string
   }
-  // mainRef: React.RefObject<HTMLDivElement>
 }
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
@@ -31,18 +28,15 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
   // eslint-disable-next-line no-console
   console.log(
-    `%c dWeb Foundation | crafted with care | caseykennedy.hns.to `,
+    `%c dotNFT | crafted with care | caseykennedy.hns.to `,
     `background: #5700ff; color: #ffffff`
   )
   return (
-    <>
-      <GlobalStyles />
-      <S.Wrapper>
-        <Header />
-        <S.Main ref={mainRef}>{children}</S.Main>
-        <Footer />
-      </S.Wrapper>
-    </>
+    <S.Wrapper>
+      <Header />
+      <S.Main ref={mainRef}>{children}</S.Main>
+      <Footer />
+    </S.Wrapper>
   )
 }
 
