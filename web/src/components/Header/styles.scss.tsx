@@ -52,3 +52,21 @@ export const Logo = styled(Flex)`
     text-decoration: none;
   }
 `
+
+export const Toggle = styled.div`
+  display: flex;
+  align-items: flex-end;
+  box-sizing: content-box;
+
+  color: ${theme.colors.text};
+  font-size: calc(${theme.fontSizes[2]});
+  font-weight: 400;
+  cursor: pointer;
+
+  position: relative;
+  z-index: 9999;
+
+  @media ${theme.mq.tablet} {
+    display: none;
+  }
+`

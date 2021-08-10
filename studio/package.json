@@ -2,7 +2,7 @@
   "private": false,
   "name": "dotnft-marketing-sanity",
   "version": "1.0.0",
-  "author": "Casey Kennedy <me@caseykennedy.hns.to>",
+  "author": "Casey Kennedy <caseykennedy.hns.to>",
   "engines": {
     "node": "14.x"
   },

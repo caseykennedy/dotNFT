@@ -2,12 +2,9 @@
 
 // ___________________________________________________________________
 
-import React, { useState } from 'react'
+import React from 'react'
 import { default as ReactModal } from 'react-responsive-modal'
-import { transparentize } from 'polished'
-
 import theme from '../../gatsby-plugin-theme-ui'
-import { useColorMode } from 'theme-ui'
 
 // ___________________________________________________________________
 
@@ -42,10 +39,10 @@ Modal.defaultProps = defaultProps
 
 const modalStyles = {
   overlay: {
-    background: theme.colors.muted,
+    background: theme.colors.white,
   },
   modal: {
-    background: theme.colors.muted,
+    background: theme.colors.white,
     boxShadow: 'none',
     margin: '0',
     padding: `0`,

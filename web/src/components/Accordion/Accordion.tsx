@@ -4,7 +4,7 @@
 
 import React, { useState, useRef } from 'react'
 
-import { Box, Flex, Text, Heading } from '../ui'
+import { Text } from 'theme-ui'
 import Icon from '../Icons'
 
 import theme from '../../gatsby-plugin-theme-ui'
@@ -49,7 +49,7 @@ const Accordion: React.FC<Props> = ({
   pb,
   pr,
   pl,
-  title
+  title,
 }) => {
   // Reference the accordion content height
   const refContent = useRef<HTMLDivElement>(null)
@@ -108,10 +108,8 @@ const Accordion: React.FC<Props> = ({
         >
           <S.AccordionToggleInner width={1}>
             <Text
-              fontFamily="heading"
-              fontSize={fontSize}
-              width={1}
               className="title"
+              sx={{ fontSize: `${fontSize}`, width: '100%' }}
             >
               {title}
             </Text>

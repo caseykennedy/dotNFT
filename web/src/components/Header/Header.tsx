@@ -4,18 +4,16 @@
 // ___________________________________________________________________
 
 import React, { useState } from 'react'
-import Typist from 'react-typist'
 import { Link } from 'gatsby'
 import HamburgerMenu from 'react-hamburger-menu'
-import { DarkModeSwitch } from 'react-toggle-dark-mode'
 
 // Theme + ui
 import theme from '../../gatsby-plugin-theme-ui'
 import * as S from './styles.scss'
-import { Box, Flex, Text, useColorMode } from 'theme-ui'
+import { Box, Flex, Text } from 'theme-ui'
 
 // Components
-import Symbol from '../Symbol'
+import Symbol from '../SVG/Symbol'
 import Navigation from './Navigation'
 import MobileNav from './MobileNav'
 import Modal from '../Modal'
@@ -43,26 +41,32 @@ const Header = () => {
           <S.Menu>
             <Navigation />
 
-            <Box className="symbol">
+            <S.Toggle onClick={toggleMenu} aria-label="toggle menu">
+              <HamburgerMenu
+                isOpen={!isNavOpen ? false : true}
+                menuClicked={toggleMenu}
+                width={44}
+                height={14}
+                strokeWidth={2}
+                rotate={0}
+                color={theme.colors.black}
+                borderRadius={0}
+                animationDuration={0.333}
+              />
+            </S.Toggle>
+
+            {/* <Box className="symbol">
               <Symbol />
-            </Box>
+            </Box> */}
           </S.Menu>
         </Flex>
       </S.Header>
 
-      {/* <Modal open={isNavOpen} close={toggleMenu}>
+      <Modal open={isNavOpen} close={toggleMenu}>
         <MobileNav isOpen={isNavOpen} handleExitOnClick={toggleMenu} />
-      </Modal> */}
+      </Modal>
     </>
   )
 }
 
 export default Header
-
-// const cursorProps = {
-//   show: false,
-//   blink: true,
-//   element: '|',
-//   hideWhenDone: true,
-//   hideWhenDoneDelay: 1000,
-// }

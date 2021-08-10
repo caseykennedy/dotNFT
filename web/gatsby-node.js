@@ -1,50 +1,86 @@
-// exports.onCreateWebpackConfig = ({ actions, stage, plugins }) => {
-//   actions.setWebpackConfig({
-//     resolve: {
-//       fallback: {
-//         https: require.resolve('https-browserify'),
-//         http: require.resolve('stream-http'),
-//       },
-//     },
-//   })
-// }
+// gatsby-node.js
 
-// Template pages
+// Log out information after a build is done
+exports.onPostBuild = ({ reporter }) => {
+  reporter.info(`Your Gatsby site has been built!`)
+}
 
-// exports.createPages = ({ graphql, actions }) => {
+// // Blog Post Pages
+// // ___________________________________________________________________
+// async function createBlogPostPages(graphql, actions) {
+//   // Get Gatsby‘s method for creating new pages
 //   const { createPage } = actions
 //   const PostTemplate = require.resolve('./src/templates/Post/Article/index.tsx')
 
-//   // Articles
-//   // ___________________________________________________________________
-//   const post = graphql(`
+//   // Query Gatsby‘s GraphAPI for all the categories that come from Sanity
+//   // You can query this API on http://localhost:8000/___graphql
+//   const result = await graphql(`
 //     {
-//       posts: allSanityPost(sort: { order: DESC, fields: publishedAt }) {
-//         edges {
-//           node {
+//       allSanityPost(sort: { order: DESC, fields: publishedAt }) {
+//         nodes {
+//           title
+//           _rawExcerpt
+//           _rawBody
+//           _id
+//           publishedAt(formatString: "MMM. DD, YYYY | hh:mma")
+//           slug {
+//             current
+//           }
+//           tags {
+//             tag
+//           }
+//           figure {
+//             alt
+//             asset {
+//               gatsbyImageData(
+//                 fit: FILLMAX
+//                 layout: FULL_WIDTH
+//                 placeholder: BLURRED
+//                 formats: [AUTO, AVIF, WEBP]
+//               )
+//               url
+//             }
+//             caption
+//           }
+//           categories {
 //             title
+//           }
+//           authors {
+//             name
+//             role
 //           }
 //         }
 //       }
 //     }
-//   `).then((result) => {
-//     if (result.errors) {
-//       Promise.reject(result.errors)
-//     }
-//     result.data.posts.edges.forEach((edge) => {
+//   `)
+//   // If there are any errors in the query, cancel the build and tell us
+//   if (result.errors) throw result.errors
+//   // Let‘s gracefully handle if allSanityCatgogy is null
+//   const postNodes = (result.data.allSanityPost || {}).nodes || []
+
+//   postNodes
+//     // Loop through the category nodes, but don't return anything
+//     .forEach((node) => {
+//       // Desctructure the id and slug fields for each category
+//       const { id, slug = {} } = node
+//       // If there isn't a slug, we want to do nothing
+//       if (!slug) return
+//       // Make the URL with the current slug
+//       const path = `/news/${slug.current}`
+//       // Create the page using the URL path and the template file, and pass down the id
+//       // that we can use to query for the right category in the template file
 //       createPage({
-//         path: `/blog/${edge.node.slug.current}`,
+//         path,
 //         component: PostTemplate,
 //         context: {
-//           slug: edge.node.slug.current,
-//           post: edge.node,
-//           next: edge.next,
-//           prev: edge.previous,
+//           post: node,
 //         },
 //       })
 //     })
-//   })
+// }
 
-//   // Return a Promise which will wait for all queries to resolve
-//   return Promise.all([post])
+// // Create Pages
+// // ___________________________________________________________________
+// exports.createPages = async ({ graphql, actions }) => {
+//   await createBlogPostPages(graphql, actions)
 // }

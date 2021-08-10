@@ -93,33 +93,3 @@ type PostContextShape = {
     }
   }
 }
-
-// Person shape
-// ___________________________________________________________________
-
-type PersonShape = {
-  people: {
-    edges: PersonEdges[]
-  }
-}
-
-type PersonEdges = {
-  node: PersonQuery
-}
-
-type PersonQuery = {
-  _createdAt: string
-  _id: string
-  _rawBio: string
-  avatar: {
-    asset: {
-      gatsbyImageData: IGatsbyImageData
-      url: string
-    }
-  }
-  name: string
-  role: string
-  slug: {
-    current: string
-  }
-}

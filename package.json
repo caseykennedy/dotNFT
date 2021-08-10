@@ -1,10 +1,10 @@
 {
   "private": false,
-  "name": "handshake-foundation-gatsby-sanity-combo",
+  "name": "dotnft-gatsby-sanity-combo",
   "version": "1.0.0",
-  "author": "Casey Kennedy <me@caseykennedy.hns.to>",
+  "author": "Casey Kennedy <caseykennedy.hns.to>",
   "engines": {
-    "node": "10.x"
+    "node": "14.x"
   },
   "scripts": {
     "clean": "lerna clean",

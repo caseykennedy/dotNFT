@@ -4,7 +4,6 @@
 
 import React from 'react'
 import { Link } from 'gatsby'
-import { useColorMode } from 'theme-ui'
 import theme from '../../../gatsby-plugin-theme-ui'
 import * as S from './styles.scss'
 
@@ -33,15 +32,19 @@ export default Navigation
 
 const data = [
   {
-    name: 'Decentralized DNS',
-    link: '/#decentralized-dns'
+    name: 'How it works',
+    link: '/',
   },
   {
-    name: 'Create & Secure',
-    link: '/#create-secure'
+    name: 'Auction',
+    link: '/',
   },
   {
-    name: 'NFT Verification',
-    link: '/#nft-verification'
-  }
+    name: 'Policies',
+    link: '/',
+  },
+  {
+    name: 'FAQ',
+    link: '/',
+  },
 ]

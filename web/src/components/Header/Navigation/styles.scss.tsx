@@ -20,7 +20,6 @@ export const Nav = styled.nav`
 
   a {
     color: ${theme.colors.text};
-    font-size: ${theme.fontSizes[1]};
     text-decoration: none;
     margin-left: ${theme.space[4]};
 
@@ -28,9 +27,9 @@ export const Nav = styled.nav`
       margin-left: ${theme.space[6]};
     }
 
-    &.active,
+    /* &.active,
     &:hover {
       color: ${theme.colors.primary};
-    }
+    } */
   }
 `
