@@ -10,9 +10,9 @@ import theme from '../../gatsby-plugin-theme-ui'
 
 // ___________________________________________________________________
 
-const SearchIp: React.FC = () => (
-  <Script type="text/javascript" id="enc-checkout-embed">
-    {(function () {
+const SearchIp = () => (
+  <script type="text/javascript" id="enc-checkDomain-embed">
+    {(() => {
       if (typeof window !== 'undefined') {
         function async_load() {
           const s = document.createElement('script')
@@ -33,7 +33,7 @@ const SearchIp: React.FC = () => (
         async_load()
       }
     })()}
-  </Script>
+  </script>
 )
 
 export default SearchIp

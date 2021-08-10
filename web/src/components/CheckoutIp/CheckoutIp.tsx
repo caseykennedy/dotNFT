@@ -7,8 +7,8 @@ import Script from 'react-inline-script'
 
 // ___________________________________________________________________
 
-const CheckoutIp: React.FC = () => (
-  <Script type="text/javascript" id="enc-checkout-embed">
+const CheckoutIp = () => (
+  <script type="text/javascript" id="enc-checkout-embed">
     {(function () {
       if (typeof window !== 'undefined') {
         function async_load() {
@@ -30,7 +30,7 @@ const CheckoutIp: React.FC = () => (
         async_load()
       }
     })()}
-  </Script>
+  </script>
 )
 
 export default CheckoutIp
