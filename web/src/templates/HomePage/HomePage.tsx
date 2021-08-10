@@ -2,7 +2,8 @@
 
 // ___________________________________________________________________
 
-import React, { useEffect, useState } from 'react'
+import * as React from 'react'
+import Script from 'react-inline-script'
 
 // Theme + ui
 import theme from '../../gatsby-plugin-theme-ui'
@@ -15,28 +16,7 @@ import SearchIp from '../../components/SearchIp'
 
 // ___________________________________________________________________
 
-const HomePage: React.FC = () => {
-  const [checkWidget, setCheckWidget] = useState('')
-  useEffect(() => {
-    setCheckWidget(<SearchIp />)
-  }, [])
-  // useEffect(() => {
-  //   const script = document.createElement('script')
-
-  //   const theUrl =
-  //     'https://esb.encircapartners.com/api/encirca/60748fe315b6d24cbeead338/widgets/checkDomain'
-
-  //   script.src = `${theUrl}${
-  //     theUrl.indexOf('?') >= 0 ? '&' : '?'
-  //   }ref=${encodeURIComponent(window.location.href)}`
-  //   script.async = true
-
-  //   document.body.appendChild(script)
-
-  //   return () => {
-  //     document.body.removeChild(script)
-  //   }
-  // }, [])
+const HomePage: React.FC = () => {  
   return (
     <S.HomePage>
       <Section>
@@ -53,17 +33,7 @@ const HomePage: React.FC = () => {
           Create and ⛓ link unique .nft domains accross blockchains and the web.
         </Text>
 
-        <Box mb={6}>{checkWidget}</Box>
-
-        <Flex mb={6}>
-          <Button mr={2} variant="primary">
-            Apply
-          </Button>
-          <Button mr={2} bg="secondary" color="black" variant="primary">
-            Apply
-          </Button>
-          <Button variant="secondary">Apply</Button>
-        </Flex>
+        <SearchIp />
 
         <Heading as="h2" mb={2}>
           Meet the{' '}
@@ -100,6 +70,16 @@ const HomePage: React.FC = () => {
           </Text>{' '}
           domain layer.
         </Heading>
+
+        <Flex mt={6}>
+          <Button mr={2} variant="primary">
+            Apply
+          </Button>
+          <Button mr={2} bg="secondary" color="black" variant="primary">
+            Apply
+          </Button>
+          <Button variant="secondary">Apply</Button>
+        </Flex>
       </Section>
 
       <Section bg="text" color="gray">
